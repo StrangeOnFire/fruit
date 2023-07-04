@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  /* max-width: 1000px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Loading */
+.loading {
+  padding: 5%;
+  background-color: #ffecb3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.7rem;
+}
+.loading > img:nth-of-type(1) {
+  width: 100px;
+}
+.loading > img:nth-of-type(2) {
+  width: 330px;
+}
+.loading > a {
+  margin: 1rem auto;
+  font-family: "Caveat", cursive;
+  color: crimson;
+  text-decoration: none;
+  font-weight: bold;
+}
+.loading > a:hover {
+  transform: scale(1.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* homepage */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepage {
+  background-color: white;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 5%;
+  gap: 2rem;
+}
+.homepage-div-1 {
   display: flex;
   flex-direction: column;
+  width: 40%;
+}
+.homepage-div-2 {
+  display: flex;
+  width: 40%;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+.homepage-div-1 > img {
+  width: 170px;
+  margin: 1rem auto;
+  border-radius: 0px;
+  box-shadow: none;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.homepage a img {
+  width: 100%;
+  margin: 1rem 5%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgb(168, 167, 166);
+}
+.homepage a img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Detail card */
+
+
+.detail-page > .img-sec {
+  width: 100%;
+  height: 350px;
+}
+.detail-page > .img-sec > a  > img {
+  width: 3rem;
+  margin: 1rem;
+}
+@media (width<800px){
+  .detail-pag
+  e > .img-sec > img {
+    aspect-ratio: 3/2 ;
+  }
+}
+.detail-page > .text-sec {
+  border-radius: 40px 40px 0 0 ;
+  background-color: white;
+  position: relative;
+  top: -30px;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 2rem;
+}
+.Apple{
+  background-image:url('./images/main_apples.webp') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Cherry{
+  background-image:url('./images/cherries-main.jpg') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Mangoes{
+  background-image:url('./images/mango-main1296x728-header.webp') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Papaya{
+  background-image:url('./images/papaya-main.jpg') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Pineapple{
+  background-image:url('./images/pineapple-main.jpg') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Watermelon{
+  background-image:url('./images/watermelon-main-finalPlK6Fh.jpg') ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.detail-page > .text-sec > .detail-link {
+padding: .6rem;
+font-weight: bold;
+width: 50%;
+text-align: center;
+border-radius: 100px 100px 0 0 ;
+}
+.detail-page > .text-sec > .detail-link > a {
+  text-decoration: none;
+  color: black;
+  font-family:  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.detail-link .active{
+  color: red;
 }
 
-.App-link {
-  color: #61dafb;
+/* benefits */
+.benefits{
+  padding-inline: 5%;
+  padding-bottom: 5%;
+}
+.benefits > h1{
+ color: orangered;
+ width: 70%;
+ padding-bottom: .3rem;
+ text-align: center;
+ border-bottom: 1px solid grey;
+ margin: auto;
+}
+.benefits > p{
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
+}
+.benefits ul {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+
+
+/* nutrients */
+
+.nutrients{
+  padding: 0 5% 5% 5%;
+}
+.nutrients > p{
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
+}
+.nutrients span{
+  font-weight: bold;
 }
